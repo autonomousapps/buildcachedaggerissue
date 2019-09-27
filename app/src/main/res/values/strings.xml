@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Build Cache Dagger Issue</string>
+    <string name="title_activity_library">LibraryActivity</string>
 </resources>

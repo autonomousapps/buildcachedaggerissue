@@ -2,6 +2,8 @@ package com.example.buildcachedaggerissue
 
 import android.app.Application
 import android.content.Context
+import com.example.mylibrary.LibraryActivity
+import com.example.mylibrary.LibraryActivityModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.Module
@@ -55,6 +57,17 @@ interface MainApplicationComponent {
 @Module
 interface ActivityBindingModule {
 
-    @ContributesAndroidInjector
-    fun MainActivity(): MainActivity
+    @ContributesAndroidInjector(
+        modules = [
+            MainActivityModule::class
+        ]
+    )
+    fun mainActivity(): MainActivity
+
+    @ContributesAndroidInjector(
+        modules = [
+            LibraryActivityModule::class
+        ]
+    )
+    fun libraryActivity(): LibraryActivity
 }

@@ -1,2 +1,3 @@
-include ':app', ':mylibrary'
 rootProject.name='Build Cache Dagger Issue'
+
+include ':app', ':mylibrary'
